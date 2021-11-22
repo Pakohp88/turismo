@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { EstadosService, Estado } from 'src/app/services/estados.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-estados',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EstadosComponent implements OnInit {
 
-  constructor() { }
+  estados: Estado[] = [];
+
+  constructor(private _estadoService: EstadosService,
+              private router: Router) { }
 
   ngOnInit(): void {
-  }
+    this.estados = this._estadoService.getEstados();
+   }
+
+   verEstado(id:number){
+     this.router.navigate( ['/estado',id] );
+   }
 
 }

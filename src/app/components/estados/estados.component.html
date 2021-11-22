@@ -1,1 +1,6 @@
-<p>estados works!</p>
+<h3 class="py-3">Estados de la rep&uacute;blica Mexicana</h3>
+<hr />
+
+<div class="card-group">
+    <app-estado-card (estadoSeleccionado)="verEstado($event)" [estado]="estado" [Id]="i" *ngFor="let estado of estados, let i = index"></app-estado-card>
+</div>

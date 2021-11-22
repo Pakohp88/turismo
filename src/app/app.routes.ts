@@ -7,9 +7,9 @@ import { SearchComponent } from './components/search/search.component';
 const APP_ROUTES: Routes = [
     { path: 'home', component: HomeComponent },
     { path: 'estados', component: EstadosComponent },
-    { path: 'estado/:id', component: EstadosComponent },
+    { path: 'estado/:id', component: EstadoComponent },
     { path: 'search/:termino', component:  SearchComponent},
-    { path: '**', pathMatch: 'full', redirectTo: ''}
+    { path: '**', pathMatch: 'full', redirectTo: 'home'}
 ];
 
 export const APP_ROUTING = RouterModule.forRoot(APP_ROUTES);

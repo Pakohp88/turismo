@@ -13,9 +13,8 @@ export class NavbarComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  buscarEstado(estado:string){
-    console.log(estado);
-    //this.router.navigate( ['/searchs', heroe] );
+  buscarEstado(estado:string){    
+    this.router.navigate( ['/search', estado] );
   }
 
 }

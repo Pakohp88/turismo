@@ -1,1 +1,19 @@
-<p>estado works!</p>
+<div class="row py-5">
+
+    <div class="col-md-4">
+
+        <img [src]="estado.img" class="img-fluid" [alt]="estado.nombre">
+        <br><br>
+        <a [routerLink]="['/estados']" class="btn btn-outline-danger btn-block">Regresar</a>
+
+    </div>
+
+    <div class="col-md-8">
+        <h3>{{ estado.nombre }}</h3>
+        <hr>
+        <p>
+            {{ estado.descripcion }}
+        </p>
+    </div>
+
+</div>

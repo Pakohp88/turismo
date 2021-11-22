@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { EstadosService, Estado } from 'src/app/services/estados.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  estados: Estado[] = [];
+
+  constructor(private _estadoService: EstadosService) { }
 
   ngOnInit(): void {
-  }
+    this.estados = this._estadoService.getEstados();
+    console.log(this.estados);
+   }
 
 }

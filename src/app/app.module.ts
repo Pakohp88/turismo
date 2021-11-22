@@ -1,7 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { EstadosService } from './services/estados.service';
+
 import { APP_ROUTING } from './app.routes';
+
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { EstadosComponent } from './components/estados/estados.component';
@@ -24,7 +27,7 @@ import { HomeComponent } from './components/home/home.component';
     BrowserModule,
     APP_ROUTING
   ],
-  providers: [],
+  providers: [EstadosService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

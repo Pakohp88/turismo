@@ -1,1 +1,15 @@
-<p>search works!</p>
+<h1>M&eacute;xico <small>Estados de la rep&uacute;blica</small></h1>
+<hr />
+
+<div class="row animated fadeIn fast" *ngIf="estados.length == 0">
+    <div class="col-md-12">
+        <div class="alert alert-info" role="alert">
+            No existe información.
+        </div>
+    </div>
+</div>
+
+
+<div class="card-columns">
+    <app-estado-card [estado]="estado" [Id]="estado.Id" *ngFor="let estado of estados, let i = index"></app-estado-card>
+</div>
