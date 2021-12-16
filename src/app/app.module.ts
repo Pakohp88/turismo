@@ -2,8 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { EstadosService } from './services/estados.service';
-
-import { APP_ROUTING } from './app.routes';
+import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -12,6 +11,8 @@ import { EstadoComponent } from './components/estado/estado.component';
 import { EstadoCardComponent } from './components/estado-card/estado-card.component';
 import { SearchComponent } from './components/search/search.component';
 import { HomeComponent } from './components/home/home.component';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { HomeComponent } from './components/home/home.component';
   ],
   imports: [
     BrowserModule,
-    APP_ROUTING
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [EstadosService],
   bootstrap: [AppComponent]

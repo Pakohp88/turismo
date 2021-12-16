@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, SimpleChange } from '@angular/core';
 import { Router } from '@angular/router';
 
 
@@ -18,6 +18,32 @@ export class EstadoCardComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    console.log('Metodo ngInit');
+  }
+
+
+  ngOnChanges(changes: SimpleChange){
+    console.log('Metodo ngOnChanges');
+  }
+
+  ngAfterContentInit(){
+    console.log('Metodo ngAfterContentInit');
+  }
+
+  ngAfterContentChecked(){
+    console.log('Metodo ngAfterContentChecked');
+  }
+
+  ngAfterViewInit(){
+    console.log('Metodo ngAfterViewInit');
+  }
+
+  ngAfterViewChecked(){
+    console.log('Metodo ngAfterViewChecked');
+  }
+
+  ngDoCkeck(){
+    console.log('Metodo ngDoCkeck');
   }
 
   verEstado(){          

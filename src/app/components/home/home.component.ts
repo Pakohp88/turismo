@@ -13,8 +13,7 @@ export class HomeComponent implements OnInit {
   constructor(private _estadoService: EstadosService) { }
 
   ngOnInit(): void {
-    this.estados = this._estadoService.getEstados();
-    console.log(this.estados);
+    this.estados = this._estadoService.getEstados();    
    }
 
 }

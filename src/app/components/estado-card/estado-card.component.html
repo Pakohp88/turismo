@@ -1,17 +1,11 @@
-<div class="col px-3 py-2">
-
-    <div class="card shadow rounded" style="width: 18rem;">
-        <img [src]="estado.img" class="card-img-top" [alt]="estado.nombre">
-        <div class="card-body">
-            <h5 class="card-title">{{ estado.nombre }}</h5>
-            <p class="card-text">{{ estado.descripcion }}</p>
-
-            <button (click)="verEstado()" type="button" class="btn btn-outline-primary btn-block"> 
-                Ver más
-            </button>
-
+<div class="col m-2 px-2">
+    <a (click)="verEstado()">
+        <div class="card shadow rounded" style="width: 18rem;">
+            <img [src]="estado.img" class="card-img-top" [alt]="estado.nombre">
+            <div class="card-img-overlay text-white">
+                <h5 class="card-title">{{ estado.nombre }}</h5>
+            </div>
         </div>
-    </div>
-
+    </a>
 
 </div>

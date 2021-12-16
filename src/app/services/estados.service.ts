@@ -1,4 +1,7 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { map } from 'rxjs/operators';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -167,10 +170,10 @@ export class EstadosService {
       img: "assets/img/zacatecas.jpg"
     }
     
-  ];
+  ];  
   
   
-  constructor() { }
+  constructor(private httpClient: HttpClient) { }
 
   getEstados(): Estado[]{
     return this.estados;
@@ -196,7 +199,6 @@ searchEstado(e:string): Estado[]{
   }
   return estadosArr;
 }
-
 
 }
 
